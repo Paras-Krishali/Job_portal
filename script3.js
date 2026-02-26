@@ -56,3 +56,22 @@ btn.onclick = function () {
     experience.value = "";
     location.value = "";
 };
+
+
+
+let search = document.getElementById("search");
+
+search.addEventListener("keyup", function () {
+    let value = search.value.toLowerCase();
+    let jobs = div.getElementsByTagName("div");
+
+    for (let i = 0; i < jobs.length; i++) {
+        let text = jobs[i].innerText.toLowerCase();
+
+        if (text.includes(value)) {
+            jobs[i].style.display = "block";
+        } else {
+            jobs[i].style.display = "none";
+        }
+    }
+});
