@@ -64,17 +64,27 @@
   <h2>POST JOBS</h2>
   <form>
     <label for="jobtitle">JobTitle</label><br>
-    <input type="text" id="jobtitle" name="jobtitle"><br><br>
+    <input type="text" id="jobtitle" name="jobtitle" autocomplete="off"><br><br>   
     <label for="company">Company</label><br><br>
-    <input type="text" id="company" name="company"><br><br>
+    <input type="text" id="company" name="company" autocomplete="organization"><br><br>
     <label for="location">Location</label><br><br>
-    <input type="text" id="location" name="location"><br><br>
+    <input type="text" id="location" name="location" autocomplete="address-level2"><br><br>
     <label for="experience">Experience</label><br><br>
-    <input type="number" id="experience" name="experience"><br><br>
+    <input type="number" id="experience" name="experience" autocomplete="off"><br><br>
+    <label for="skills">Skills Required:</label><br> 
+    <input type="text" id="skills" name="skills" required autocomplete="off"><br><br>
 
-    <input type="submit" value="Submit Application">
+    <button type="button" id="createListing">Create Listing</button>
   </form>
-  <div id="Cart">
+
+
+
+<div id="Cart"></div>
+
+
+  <script src="script3.js" defer></script>
+
+  <!-- <div id="Cart">
     <script>
 const form = document.getElementById("myForm"); 
 const div = document.getElementById("Cart"); 
@@ -97,7 +107,7 @@ form.addEventListener("submit", function(event) {
 });
 </script>
 
-  </div>
+  </div>-->
 
 </body>
 </html>
